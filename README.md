@@ -39,13 +39,86 @@ Syntax :
 ```
 os
 ```
+Example :
+```
+os
+-----------------
+Output :
+Linux-5.11.0-1023-gcp-x86_64-with-glibc2.27
+(thats what repl.it uses)
+```
 
 ## Lb
 The lb command takes no arguments, and outputs a single line break.
 Syntax :
 ```
-speak [output]
+lb
+```
+Example :
+```
+lb
+-----------------
+Output :
+
 ```
 
 ## Wait
 The wait command takes one argument (int), and stops execution for the amount of seconds given.
+Syntax :
+```
+wait [seconds]
+```
+Example :
+```
+wait 3
+-----------------
+Output :
+(does nothing for 3 seconds)
+```
+
+## Add
+The add command takes one argument (str), and adds a variable that can be called.
+Syntax :
+```
+add [variable name]
+```
+Example :
+```
+add test
+-----------------
+Output :
+(nothing yet)
+```
+
+## Set
+The set command takes two arguments (str,str), and sets the variable with the name of argument one to argument two.
+Syntax :
+```
+set [variable name] [value]
+```
+Example :
+```
+add test
+set test Hello!
+speak %test%
+-----------------
+Output :
+Hello!
+```
+
+## Get
+The get command takes two arguments (str,str) that are joined with a "://", and outputs a GET request to the given string (url expected).
+Syntax :
+```
+get [protocol]://[url]
+```
+Example :
+```
+get https://example.com
+-----------------
+Output :
+<html>
+    ...
+</html>
+```
+
