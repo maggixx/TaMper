@@ -12,19 +12,8 @@ TaMper has variables, that can be referenced in some commands and can be created
 Its a placeholder. What else do i have to say?
 #### os
 Contains the name of the current os.
-## Speak
-The speak command takes one argument (str), and it will output whatever that argument is onto the console.
-Syntax :
-```
-speak [output]
-```
-Example :
-```
-speak hello world
------------------
-Output :
-hello world
-```
+
+If a variable referenced does not exist, it will simply return "VARIABLE[inputted variable name]"
 
 ## Exit
 The exit command takes no arguments, and simply calls the python command "exit()"
@@ -122,3 +111,32 @@ Output :
 </html>
 ```
 
+## Speak
+The speak command takes one argument (str), and it will output whatever that argument is onto the console.
+If the given argument starts and ends with %, it will look for a variable with that name.
+Syntax :
+```
+speak [output]
+```
+Example :
+```
+speak hello world
+add bhsu
+set bhsu hello again
+speak %bhsu%
+-----------------
+Output :
+hello world
+hello again
+```
+
+# Errors
+There are errors that can occur in certain places in the code
+### Error 1
+This error occurs when you try to run a file that does not exist.
+### Error 2
+This error occurs when an invalid command is read from code.
+### Error 3
+This error occurs when an invalid url protocol is given to the GET command.
+### Error 4
+This error occurs when a website/url is given to the GET command, and it is unable to connect to the given website/url.
