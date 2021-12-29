@@ -48,6 +48,7 @@ for line in lines:
         yes = True
     if line[0:3] == "set":
         exec("VARIABLE" + line.split(" ")[1] + " = '" + str(" ".join(line.split(" ")[2:len(line.split(" "))])) + "'")
+        #this single line was written by me (marty) and i have no idea how i did it
         yes = True
     elif line[0:3] == "get":
         try:
